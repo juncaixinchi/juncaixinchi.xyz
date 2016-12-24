@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>学习笔记-JavaScript</title>
+	<link rel="shortcut icon" href="img/L.ico">
+	<script> 
+		function Change(value)
+		{
+			if (document.getElementById(value).hidden==true)
+			{
+				document.getElementById(value).hidden=null;
+			}
+			else
+			{
+				document.getElementById(value).hidden="hidden";
+			}
+		}
+	</script>
+</head>
+<body>
+	<a name="First">
+		<h1>学习笔记</h1>
+		<noscript style="color:#FF080D">
+			本站的正常显示需要支持Javascript
+		</noscript>
+	</a>
+	<hr/>
+	<h2 onclick="Change('f0')">1、JS的基本命令</h2>
+	<section id="f0" hidden="hidden">
+		<b>利用js和表单，建立一个简单的打分系统</b>
+		<p id="text1">我是要变化的文本！</p>
+		<script>
+			function test()
+			{
+				a=document.getElementById("f0");
+				document.getElementById("text1").innerHTML="我是要变化的文本！";
+				a.hidden="hidden";
+			}
+
+			function getRating(id) {
+				var rating=document.getElementById(id).value;
+				if (rating=="" || isNaN(rating)) 
+				{
+					alert('请输入数字！');
+					return;
+				}
+				if(rating > 5 || rating < 0) 
+				{
+					alert('数字不在范围内');return;
+				}
+				/*if(rating > 5 || rating < 0) throw new Error('数字不在范围内'); return '★★★★★☆☆☆☆☆'.substring(5 - rating, 10 - rating );*/
+				var a='★★★★★☆☆☆☆☆'.substring(5 - rating, 10 - rating );
+				document.getElementById("text1").innerHTML=a;
+			}
+			function Get_Pic(id)
+			{
+				var x=document.getElementById(id).value;
+				url="http://file.fgowiki.591mogu.com/fgo/card/servant/" + x + ".jpg";
+				document.getElementById("pic").src=url;
+			}
+		</script>
+		<br>
+		<!--要注意这里要用id，然后get id，name 与id 是不同的！-->
+		<input type="text" id="text_input" placeholder="你要打几星（0-5）？">
+		<br>
+		<br>
+		<!--函数内参数要写加了单引号的id名称-->
+		<button type="button" onclick="getRating('text_input')">点击打分</button>
+		<br>
+		<br>
+		0分<input type="range" id="points" min="0" max="5">5分
+		<br>
+		<br>
+		<button type="button" onclick="getRating('points')">点击打分</button>
+		<br>
+		<br>
+
+		<button type="button" onclick="test()">点击这里，隐藏内容</button>
+		<br>
+		<br>
+		<hr>
+		<b>自动抓取fgowiki的图鉴！</b>
+		<br>
+		<br>
+		<img id="pic" src="http://file.fgowiki.591mogu.com/fgo/card/servant/001D.jpg" alt="英灵图鉴" float="left">
+		<br>
+		<input type="text" id="input_pic" placeholder="输入ID，如023D">
+		<br>
+		<br>
+		<button type="button" onclick="Get_Pic('input_pic')">Get Pic</button>
+		<br>
+	</section>
+</body>
+</html>
