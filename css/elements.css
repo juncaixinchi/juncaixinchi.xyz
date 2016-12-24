@@ -1,0 +1,41 @@
+@charset "utf-8";
+#js_test {
+	position: absolute;
+	width: 40%;
+	height: 200px;
+	z-index: 1;
+	left: 30%;
+	bottom: 10%;
+	background-color: #0C6;
+}
+#apDiv_bg1 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color:#EFF9EE;
+	left: -1px;
+	top: -1px;
+}
+#apDiv_bg2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: #F63;
+	left: -1px;
+	top: 100%;
+}
+.Big_title {
+	position: relative;
+	width: 60%;
+	left: 20%;
+	margin-top: 20%;
+	font-size: 120px;
+	text-align: center
+}
+#footer {
+	position: absolute;
+	left: 45%;
+	top: 90%;
+}

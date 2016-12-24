@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+ body {
+	margin: 0;
+	padding: 0;
+	background-color: #eee;
+}
+h1 {
+	text-align: center;
+	color:#D48486;
+}
+.container {
+	margin: 2% auto;
+	text-align: center;
+}
+.container img {
+	background: #FFF;
+	padding: 10px 10px 15px;
+	position: absolute;
+	box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+	-moz-transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+}
+.container img:hover {
+	box-shadow: 15px 15px 20px rgba(50, 50, 50, 0.4);
+	-webkit-transform: rotate(0deg) scale(1.20);
+	-moz-transform: rotate(0deg) scale(1.20);
+	transform: rotate(0deg) scale(1.20);
+	z-index: 2;
+}
+.pic1 {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	transform: rotate(0deg);
+	left: 32%;
+	top: 10%;
+}
+.pic2 {
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+	left: 5%;
+	top: 0%;
+}
+.pic3 {
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	transform: rotate(5deg);
+	right: 5%;
+	top: 2%;
+}
+.pic4 {
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+	right: 5%;
+	top: 34%;
+}
+.pic5 {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	transform: rotate(0deg);
+	left: 32%;
+	top: 20%;
+}
+.pic6 {
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	transform: rotate(5deg);
+	left: 5%;
+	top: 35%;
+}
+#Music {
+position: absolute;
+z-index:2;
+top: 5%;
+right: 5%;
+}

@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+#main-container {
+	position: relative;
+	margin: 0 auto;
+	overflow:hidden;
+	max-width: 1200px;
+	width: 100%;
+	margin-top: -5px;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 5px 5px 20px #909090;/*safari或chrome*/
+}
+#sub-container{
+	position: relative;
+	margin: 0 auto;
+	height:200px;
+	width: 100%;
+	}
+#main-pic {
+	position: relative;
+	float:left;
+	margin: 0 auto;
+	height: 560px;
+	vertical-align: auto;
+	overflow: hidden;
+}
+/*.Big_title {
+	position: absolute;
+	width: 60%;
+	right: 20%;	
+	top: 30%;
+	font-size: 80px;
+	text-align: center;
+	color: #7DC5CD;
+}*/
+/*三个Div的形式，靠float:left实现并排排列*/
+.Welcome_word {
+	max-width: 400px;
+	width:100%;
+	float:left;
+	padding:10px;
+	font-size: 20px;
+	text-align: right;
+	line-height: 50px;
+	color: #7DC5CD;
+}
+.Center_pic {
+	float:left;
+	text-align:center;/*图片居中*/
+	padding:10px;
+	margin: 0 auto;
+	max-width: 400px;
+	width:100%;
+}
+.Contact{
+	float:left;
+	max-width: 400px;
+	width:100%;
+	padding:10px;
+	font-size: 20px;
+	text-align: left;
+	line-height: 50px;
+	color: #7DC5CD;
+}
+.footer {
+	position: relative;
+	clear:both;
+	bottom: 0%;
+	width: 100%;
+	text-align: center;
+	font-size: 15px;
+	color: #5E5E5E;
+}
