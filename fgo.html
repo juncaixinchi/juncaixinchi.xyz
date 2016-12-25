@@ -127,10 +127,12 @@
 				content.strokeText(HP,370,830);
 				content.fillStyle="white";
 				content.fillText(HP,370,830);
+				//画布内有图片存在，故不能直接使用toDataURL()，需考虑CROS
+				dataURL=canvas.toDataURL();
+				document.getElementById('pic_show').src = dataURL;
 			}
-			//画布内有图片存在，故不能直接使用toDataURL()，需考虑CROS
-			dataURL=canvas.toDataURL();
-			document.getElementById('pic_show').src = dataURL;
+
+
 			// canvas.hidden=null;
 		}
 		function get_zhou()//生成周杰伦样例的函数
@@ -164,7 +166,7 @@
 </head>
 <body>
 	<div id="main-container" >
-		<h2>自定英灵(￣▽￣)~[]</h2>
+		<h2>自定英灵(￣▽￣)~[]</h2>	
 		英灵的名称：<br><br>
 		<input type="text" id="Hero_name" placeholder="请填入英灵名称" style="max-width:250px; width: 100%"><br><br>
 		英灵的职介：<br><br>
