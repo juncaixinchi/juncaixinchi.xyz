@@ -23,6 +23,10 @@
 			max-width: 500px;
 			width: 100%;
 		}
+		@font-face {
+			font-family: FGO;
+			src: url('Font/CasadSerial-Medium.ttf') format("truetype");
+		}
 	</style>
 	<script type="text/javascript">
 		function preLoadImg(url) //图片预下载用的函数
@@ -61,9 +65,12 @@
 	    {
 	    	var canvas=document.getElementById(id);
 	    	var content=canvas.getContext("2d");
-	    	var img_bg=new Image();
 	    	var img_logo=new Image();
 	    	var img_hero=new Image();
+	    	var img_bg=new Image();
+	    	img_logo.crossOrigin = '';
+	    	img_hero.crossOrigin = '';
+	    	img_bg.crossOrigin = '';
 	    	var Hero_class=document.getElementById("Hero_class").value;
 	    	var Hero_name=document.getElementById("Hero_name").value;
 	    	var ATK=document.getElementById("ATK").value;
@@ -90,8 +97,8 @@
 	    		content.drawImage(img_logo,0,0,500,850);
 	    		/*职介部分*/
 				content.textAlign="center";//是文字居中
-				content.font="50px bentham";//暂时使用改字体
-				content.lineWidth = 3;//描边的宽度
+				content.font="50px FGO";
+				content.lineWidth = 4;//描边的宽度
 				content.strokeStyle = "black";//描边的颜色
 				content.strokeText(Hero_class,250,727);
 				content.fillStyle="white";//内部颜色
@@ -103,15 +110,14 @@
 				content.lineWidth = 2;
 				content.stroke();
 				/*英灵名称*/
-				content.font="20px bentham";
-				content.lineWidth = 3;
+				content.font="25px 隶书";
 				content.strokeStyle = "black";
+				content.lineWidth = 4;//描边的宽度
 				content.strokeText(Hero_name,250,753);
 				content.fillStyle="white";
 				content.fillText(Hero_name,250,753);
 				/*ATK*/
-				content.font="50px bentham";
-				content.lineWidth = 3;
+				content.font="50px FGO";
 				content.strokeStyle = "black";
 				content.strokeText(ATK,130,830);
 				content.fillStyle="white";
@@ -122,9 +128,9 @@
 				content.fillStyle="white";
 				content.fillText(HP,370,830);
 			}
-			/*画布内有图片存在，故不能使用toDataURL()
-			var dataURL = canvas.toDataURL();
-			document.getElementById('pic_show').src = dataURL;*/
+			//画布内有图片存在，故不能使用toDataURL()
+			dataURL=canvas.toDataURL();
+			document.getElementById('pic_show').src = dataURL;
 			canvas.hidden=null;
 		}
 		function get_zhou()//生成周杰伦样例的函数
@@ -159,6 +165,8 @@
 <body>
 	<div id="main-container" >
 		<h2>自定英灵(￣▽￣)~[]</h2>
+		<p style="font-family: FGO">特别的姿态、贞德 Ruler</p>
+		<p>特别的姿态、贞德 Ruler</p>
 		英灵的名称：<br><br>
 		<input type="text" id="Hero_name" placeholder="请填入英灵名称" style="max-width:250px; width: 100%"><br><br>
 		英灵的职介：<br><br>
@@ -191,6 +199,7 @@
 		<a href="#Canvas-position"><button onclick="get_zhou()">生成周天王！</button></a>
 		<a href="#Canvas-position"><button onclick="get_lei()">生成蕾姆！</button></a>
 		<img id="preview" hidden="hidden">
+		<img id="pic_show">
 	</div>
 	<div id="Canvas-container">
 		<a name="Canvas-position">
