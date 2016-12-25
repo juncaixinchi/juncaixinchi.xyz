@@ -128,10 +128,10 @@
 				content.fillStyle="white";
 				content.fillText(HP,370,830);
 			}
-			//画布内有图片存在，故不能使用toDataURL()
+			//画布内有图片存在，故不能直接使用toDataURL()，需考虑CROS
 			dataURL=canvas.toDataURL();
 			document.getElementById('pic_show').src = dataURL;
-			canvas.hidden=null;
+			// canvas.hidden=null;
 		}
 		function get_zhou()//生成周杰伦样例的函数
 		{
@@ -199,13 +199,13 @@
 		<a href="#Canvas-position"><button onclick="get_zhou()">生成周天王！</button></a>
 		<a href="#Canvas-position"><button onclick="get_lei()">生成蕾姆！</button></a>
 		<img id="preview" hidden="hidden">
-		<img id="pic_show">
 	</div>
 	<div id="Canvas-container">
 		<a name="Canvas-position">
 			<canvas id="myCanvas" width="500" height="850" style="border:1px solid #c3c3c3" hidden="hidden">
 				你的浏览器不支持canvas，请更换浏览器！
 			</canvas>
+			<img id="pic_show">
 		</a>
 	</div>
 </body>
