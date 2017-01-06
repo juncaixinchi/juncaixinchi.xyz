@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>俊采新驰的个人主页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="img/L.ico">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="js/scrolloverflow.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],//定义各个FullPage
+				menu: '#menu',//定义菜单
+				loopTop: true,
+				loopBottom: true,//到底后返回首页
+				easingcss3: 'cubic-bezier(0.25, 0.1, 0.25, 1.1)',//回弹效果
+				// sectionsColor: ['#4BBFC3', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'] //设置各section的底色，使用背景图片时就不需要了
+				'navigation': true,
+				'navigationPosition': 'right',//定义导航的小点点
+				'onLeave': function(index, nextIndex){ //Callback，到达第一页时使返回首页的按钮消失，非第一页则显示按钮
+					if(nextIndex == 1){
+						$('div.returntop').hide();
+					}else{
+						$('div.returntop').show();
+					}
+				},
+				'afterLoad': function(){
+					var $img = $('section img');
+					if($img.attr('src') == ''){
+						$img.attr('src', $img.attr('data-src'));
+					}
+				}
+			});
+			$('div.returntop').click(function(){
+
+			});
+
+		});
+
+	</script>
+	<style type="text/css">
+		.section{
+			text-align:center;
+		}
+		/*设置背景为特定图片*/
+		#section0{
+			background-image: url(img/NL/northernlights3.jpg);
+		}
+		#section1{
+			background-image: url(img/NL/northernlights2.jpg);
+		}
+		#section2{
+			background-image: url(img/NL/northernlights1.jpg);
+		}
+		#section3{
+			background-image: url(img/NL/northernlights4.jpg);
+		}
+		/*设置背景为色彩线性变化*/
+/*		#section0{
+			background: -webkit-gradient(linear, top left, bottom left, from(#4bbfc3), to(#7baabe));
+			background: -webkit-linear-gradient(#4BBFC3, #7BAABE);
+			background: linear-gradient(#4BBFC3,#7BAABE);
+		}
+
+		#section1{
+			background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
+			background: -webkit-linear-gradient(#969AC6, #636F8F);
+			background: linear-gradient(#969AC6,#636F8F);
+		}
+		#section2{
+			background: -webkit-gradient(linear, top left, bottom left, from(#4bbfc3), to(#7baabe));
+			background: -webkit-linear-gradient(#4BBFC3, #7BAABE);
+			background: linear-gradient(#4BBFC3,#7BAABE);
+		}
+
+		#section3{
+			background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
+			background: -webkit-linear-gradient(#969AC6, #636F8F);
+			background: linear-gradient(#969AC6,#636F8F);
+		}*/
+		/*设置导航菜单的格式*/
+		#menu li {
+			display:inline-block;
+			margin: 10px;
+			color: #000;
+			background:#fff;
+			background: rgba(255,255,255, 0.5);
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+		}
+		#menu li.active{
+			background:#666;
+			background: rgba(0,0,0, 0.5);
+			color: #fff;
+		}
+		#menu li a{
+			text-decoration:none;
+			color: #000;
+		}
+		#menu li.active a:hover{
+			color: #000;
+		}
+		#menu li:hover{
+			background: rgba(255,255,255, 0.8);
+		}
+		#menu li a,
+		#menu li.active a{
+			padding: 9px 18px;
+			display:block;
+		}
+		#menu li.active a{
+			color: #fff;
+		}
+		#menu{
+			position:fixed;
+			top:0;
+			left:0;
+			height: 40px;
+			z-index: 70;
+			width: 100%;
+			padding: 0;
+			margin:0;
+		}
+		/*首页文字格式*/
+		.Big_word
+		{
+			font-size: 70px;
+			color: white;
+		}
+		.title{
+			color: blue;
+			font-size: 50px;
+			line-height:1.2;
+		}
+		/*返回按钮格式*/
+		.returntop{
+			display:none;
+			height: 66px;
+			width: 70px;
+			background:url(img/bt_top.png) no-repeat;
+			background-size:auto 100%;
+			position:fixed;
+			bottom: 66px;
+			right: 70px;
+			cursor:pointer;
+			z-index:10;
+		}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li data-menuanchor="firstPage" class="active"><a href="#firstPage">首页</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">个人介绍</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">作品</a></li>
+		<li data-menuanchor="4thPage"><a href="#4thPage">其他</a></li>
+	</ul>
+	<a href="#firstPage"><div class="returntop"></div></a>
+	<div id="fullpage">
+		<div class="section active" id="section0">
+			<h1 class="Big_word">Welcome!<br>欢迎光临我的个人主页</h1>
+		</div>
+		<div class="section" id="section1">
+			<h1 class="Big_word">我的愿望是世界和平<br>^_^</h1>
+		</div>
+		<div class="section" id="section2">
+			<div class="slide ">
+				<h1 class="title">自定义FGO英灵</h1>
+				<a href="FGO.html"><img src="img/Leimu.png" alt="Leimu.png"></a>
+			</div>
+			<div class="slide active">
+				<h1  class="title">我的作品</h1>
+			</div>
+			<div class="slide">
+				<h1 class="title">学习笔记1</h1>
+				<a href="Study_Note.html"><img src="img/note.png" alt="note.png"></a>
+			</div>
+			<div class="slide">
+				<h1 class="title">学习笔记2</h1>
+				<a href="Study_Note2.html"><img src="img/note.png" alt="note.png"></a>
+			</div>
+		</div>
+		<div class="section" id="section3">
+			<h1 class="Big_word">联系方式<br>微信：juncaixinchi123<br>Github：<a href="https://github.com/juncaixinchi" target="_blank">juncaixinchi</a><br>(..•˘_˘•..)</h1>
+		</div>
+	</div>
+
+</body>
+</html>

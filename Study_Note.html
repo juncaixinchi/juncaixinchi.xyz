@@ -1,27 +1,45 @@
 ﻿<!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>学习笔记</title>
-  <link rel="shortcut icon" href="img/L.ico">
+<meta charset="utf-8">
+<title>学习笔记</title>
+<link rel="shortcut icon" href="img/L.ico">
 <!--[if lt IE 9]>
 <script src="http:////cdn.bootcss.com/html5shiv/r29/html5.js"></script>
 <![endif]-->
 <style>
-  .bilibili {
-    /*应用bilibili的外链，height设小66px,embed内加设style="margin-top:-29px"以挡住无关内容*/
-    width: 544px;
-    height: 349px;
-    overflow: hidden;
-  }
-  pre {
-    width: 800px;
-    margin: 10px 0 0 0;
-    padding: 10px;
-    border: 0;
-    border: 1px dotted #785;
-    background: #f5f5f5;
-  }
+.bilibili {
+	/*应用bilibili的外链，height设小66px,embed内加设style="margin-top:-29px"以挡住无关内容*/
+	width: 544px;
+	height: 349px;
+	overflow: hidden;
+}
+
+table.dataintable {
+  margin-top:10px;
+  border-collapse:collapse;
+  border:3px solid #555555;
+  width:100%;
+  max-width:900px;
+  background-color:#D7D7D7;
+  align:center;
+}
+table.dataintable td {
+  vertical-align:baseline;
+  padding:5px 15px 5px 6px;
+  background-color:#d5d5d5;
+  border:1px solid #aaa;
+  text-align:center;
+}
+
+pre {
+	width: 800px;
+	margin: 10px 0 0 0;
+	padding: 10px;
+	border: 0;
+	border: 1px dotted #785;
+	background: #f5f5f5;
+}
 </style>
 <!--点击展开下拉内容的js-->
 <script> 
@@ -39,167 +57,187 @@
 </script>
 </head>
 <body>
-  <a name="First">
-    <h1>学习笔记</h1>
-    <noscript style="color:#FF080D">
-      本站的正常显示需要支持Javascript
-    </noscript>
-  </a>
-  <hr/>
-  <!--双引号内要用单引号-->
-  <h2 onclick="Change('f0')">0、来自w3School的速查手册</h2>
-  <section id="f0" hidden="hidden"> 
-
-    <!--大段的速查手册-->
+<a name="First">
+<h1>学习笔记</h1>
+<noscript style="color:#FF080D">
+本站的正常显示需要支持Javascript
+</noscript>
+</a>
+<hr/>
+<!--双引号内要用单引号-->
+<h2 onclick="Change('f0')">0、来自w3School的速查手册</h2>
+<section id="f0" hidden="hidden"> 
+  <!--大段的速查手册-->
+  <div>
     <div>
-      <div>
-        <h2>HTML基本文档（HTML Basic Document）</h2>
-        <pre>
-          &lt;html&gt;
-          &lt;head&gt;
-          &lt;title&gt;Document name goes here&lt;/title&gt;
-          &lt;/head&gt;
-          &lt;body&gt;
-          Visible text goes here
-          &lt;/body&gt;
-          &lt;/html&gt;
+      <h2>HTML基本文档（HTML Basic Document）</h2>
+      <pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Document name goes here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Visible text goes here
+&lt;/body&gt;
+&lt;/html&gt;
         </pre>
-      </div>
-      <div>
-        <h2>文本元素（Text Elements）</h2>
-        <pre>&lt;p&gt;This is a paragraph&lt;/p&gt;
-          &lt;br&gt; (line break)
-          &lt;hr&gt; (horizontal rule)
-          &lt;pre&gt;This text is preformatted&lt;/pre&gt;</pre>
-        </div>
-        <div>
-          <h2>逻辑样式（Logical Styles）</h2>
-          <pre>&lt;em&gt;This text is emphasized&lt;/em&gt;
-            &lt;strong&gt;This text is strong&lt;/strong&gt;
-            &lt;code&gt;This is some computer code&lt;/code&gt;</pre>
-          </div>
-          <div>
-            <h2>物理样式（Physical Styles）</h2>
-            <pre>&lt;b&gt;This text is bold&lt;/b&gt;
-              &lt;i&gt;This text is italic&lt;/i&gt;</pre>
-            </div>
-            <div>
-              <h2>链接、锚和图片元素（Links, Anchors, and Image Elements）</h2>
-              <pre>&lt;a href=&quot;http://www.example.com/&quot;&gt;This is a Link&lt;/a&gt;
-                &lt;a href=&quot;http://www.example.com/&quot;&gt;&lt;img src=&quot;URL&quot;
-                alt=&quot;Alternate Text&quot;&gt;&lt;/a&gt;
-                &lt;a href=&quot;mailto:webmaster@example.com&quot;&gt;Send e-mail&lt;/a&gt;A named anchor:
-                &lt;a name=&quot;tips&quot;&gt;Useful Tips Section&lt;/a&gt;
-                &lt;a href=&quot;#tips&quot;&gt;Jump to the Useful Tips Section&lt;/a&gt;</pre>
-              </div>
-              <div>
-                <h2>无序列表（Unordered list）</h2>
-                <pre>&lt;ul&gt;
-                  &lt;li&gt;First item&lt;/li&gt;
-                  &lt;li&gt;Next item&lt;/li&gt;
-                  &lt;/ul&gt;</pre>
-                </div>
-                <div>
-                  <h2>有序列表（Ordered list）</h2>
-                  <pre>&lt;ol&gt;
-                    &lt;li&gt;First item&lt;/li&gt;
-                    &lt;li&gt;Next item&lt;/li&gt;
-                    &lt;/ol&gt;</pre>
-                  </div>
-                  <div>
-                    <h2>定义列表（Definition list）</h2>
-                    <pre>&lt;dl&gt;
-                      &lt;dt&gt;First term&lt;/dt&gt;
-                      &lt;dd&gt;Definition&lt;/dd&gt;
-                      &lt;dt&gt;Next term&lt;/dt&gt;
-                      &lt;dd&gt;Definition&lt;/dd&gt;
-                      &lt;/dl&gt;</pre>
-                    </div>
-                    <div>
-                      <h2>表格（Tables）</h2>
-                      <pre>&lt;table border=&quot;1&quot;&gt;
-                        &lt;tr&gt;
-                        &lt;th&gt;someheader&lt;/th&gt;
-                        &lt;th&gt;someheader&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                        &lt;td&gt;sometext&lt;/td&gt;
-                        &lt;td&gt;sometext&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;/table&gt;</pre>
-                      </div>
-                      <div>
-                        <h2>框架（Frames）</h2>
-                        <pre>&lt;frameset cols=&quot;25%,75%&quot;&gt;
-                          &nbsp; &lt;frame src=&quot;page1.htm&quot;&gt;
-                          &nbsp; &lt;frame src=&quot;page2.htm&quot;&gt;
-                          &lt;/frameset&gt;
+    </div>
+    <div>
+      <h2>文本元素（Text Elements）</h2>
+      <pre>
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;br&gt; (line break)
+&lt;hr&gt; (horizontal rule)
+&lt;pre&gt;This text is preformatted&lt;/pre&gt;
+          </pre>
+    </div>
+    <div>
+      <h2>逻辑样式（Logical Styles）</h2>
+      <pre>
+&lt;em&gt;This text is emphasized&lt;/em&gt;
+&lt;strong&gt;This text is strong&lt;/strong&gt;
+&lt;code&gt;This is some computer code&lt;/code&gt;
+            </pre>
+    </div>
+    <div>
+      <h2>物理样式（Physical Styles）</h2>
+      <pre>
+&lt;b&gt;This text is bold&lt;/b&gt;
+&lt;i&gt;This text is italic&lt;/i&gt;
+              </pre>
+    </div>
+    <div>
+      <h2>链接、锚和图片元素（Links, Anchors, and Image Elements）</h2>
+      <pre>
+&lt;a href=&quot;http://www.example.com/&quot;&gt;This is a Link&lt;/a&gt;
+&lt;a href=&quot;http://www.example.com/&quot;&gt;&lt;img src=&quot;URL&quot;
+alt=&quot;Alternate Text&quot;&gt;&lt;/a&gt;
+&lt;a href=&quot;mailto:webmaster@example.com&quot;&gt;Send e-mail&lt;/a&gt;A named anchor:
+&lt;a name=&quot;tips&quot;&gt;Useful Tips Section&lt;/a&gt;
+&lt;a href=&quot;#tips&quot;&gt;Jump to the Useful Tips Section&lt;/a&gt;
+                </pre>
+    </div>
+    <div>
+      <h2>无序列表（Unordered list）</h2>
+      <pre>
+&lt;ul&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Next item&lt;/li&gt;
+&lt;/ul&gt;
+                  </pre>
+    </div>
+    <div>
+      <h2>有序列表（Ordered list）</h2>
+      <pre>
+&lt;ol&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Next item&lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+    </div>
+    <div>
+      <h2>定义列表（Definition list）</h2>
+      <pre>
+&lt;dl&gt;
+&lt;dt&gt;First term&lt;/dt&gt;
+&lt;dd&gt;Definition&lt;/dd&gt;
+&lt;dt&gt;Next term&lt;/dt&gt;
+&lt;dd&gt;Definition&lt;/dd&gt;
+&lt;/dl&gt;
+                      </pre>
+    </div>
+    <div>
+      <h2>表格（Tables）</h2>
+      <pre>
+&lt;table border=&quot;1&quot;&gt;
+&lt;tr&gt;
+&lt;th&gt;someheader&lt;/th&gt;
+&lt;th&gt;someheader&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sometext&lt;/td&gt;
+&lt;td&gt;sometext&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
                         </pre>
-                      </div>
-                      <div>
-                        <h2>表单（Forms）</h2>
-                        <pre>&lt;form action=&quot;http://www.example.com/test.asp&quot; method=&quot;post/get&quot;&gt;
-                          &lt;input type=&quot;text&quot; name=&quot;lastname&quot;
-                          value=&quot;Nixon&quot; size=&quot;30&quot; maxlength=&quot;50&quot;&gt;
-                          &lt;input type=&quot;password&quot;&gt;
-                          &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot;&gt;
-                          &lt;input type=&quot;radio&quot; checked=&quot;checked&quot;&gt;
-                          &lt;input type=&quot;submit&quot;&gt;
-                          &lt;input type=&quot;reset&quot;&gt;
-                          &lt;input type=&quot;hidden&quot;&gt;
-                          &lt;select&gt;
-                          &lt;option&gt;Apples
-                          &lt;option selected&gt;Bananas
-                          &lt;option&gt;Cherries
-                          &lt;/select&gt;
-                          &lt;textarea name=&quot;Comment&quot; rows=&quot;60&quot;
-                          cols=&quot;20&quot;&gt;&lt;/textarea&gt;
-                          &lt;/form&gt;
+    </div>
+    <div>
+      <h2>框架（Frames）</h2>
+      <pre>
+&lt;frameset cols=&quot;25%,75%&quot;&gt;
+&nbsp; &lt;frame src=&quot;page1.htm&quot;&gt;
+&nbsp; &lt;frame src=&quot;page2.htm&quot;&gt;
+&lt;/frameset&gt;
                         </pre>
-                      </div>
-                      <div>
-                        <h2>实体元素（Entities）</h2>
-                        <pre>&amp;lt; is the same as &lt;
-                          &amp;gt; is the same as &gt;
-                          &amp;#169; is the same as &#169;</pre>
-                        </div>
-                        <div>
-                          <h2>其他元素（Other Elements）</h2>
-                          <pre>&lt;!-- This is a comment --&gt;
-                            &lt;blockquote&gt;
-                            Text quoted from some source.
-                            &lt;/blockquote&gt;
-                            &lt;address&gt;
-                            Address 1&lt;br&gt;
-                            Address 2&lt;br&gt;
-                            City&lt;br&gt;
-                            &lt;/address&gt;
+    </div>
+    <div>
+      <h2>表单（Forms）</h2>
+      <pre>
+&lt;form action=&quot;http://www.example.com/test.asp&quot; method=&quot;post/get&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;lastname&quot;
+value=&quot;Nixon&quot; size=&quot;30&quot; maxlength=&quot;50&quot;&gt;
+&lt;input type=&quot;password&quot;&gt;
+&lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot;&gt;
+&lt;input type=&quot;radio&quot; checked=&quot;checked&quot;&gt;
+&lt;input type=&quot;submit&quot;&gt;
+&lt;input type=&quot;reset&quot;&gt;
+&lt;input type=&quot;hidden&quot;&gt;
+&lt;select&gt;
+&lt;option&gt;Apples
+&lt;option selected&gt;Bananas
+&lt;option&gt;Cherries
+&lt;/select&gt;
+&lt;textarea name=&quot;Comment&quot; rows=&quot;60&quot;
+cols=&quot;20&quot;&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+                        </pre>
+    </div>
+    <div>
+      <h2>实体元素（Entities）</h2>
+      <pre>
+&amp;lt; is the same as &lt;
+&amp;gt; is the same as &gt;
+&amp;#169; is the same as &#169;
                           </pre>
-                        </div>
-                      </div>
-                    </section>
-                    <h2 onclick="Change('f1')">1、各种链接及引用B站外链</h2>
-                    <section id="f1" hidden="hidden"> <a href="http://www.juncaixinchi.xyz" target="">my home</a> <br>
-                      <a href="http://www.juncaixinchi.xyz" target="_blank">my home with "_blank" 打开新页面</a> <br>
-                      <a href="http://www.juncaixinchi.xyz" target="_top">my home with "_top" 跳出框架</a> <br>
-                      <a href="http://www.juncaixinchi.xyz" target="_self">my home with "_self 留在框架中"</a> <br>
-                      <div class="bilibili">
-                        <embed height="415" width="544" quality="high" style="margin-top:-29px" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=7234117&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"> </embed>
-                      </div>
-                    </section>
-                    <h2 onclick="Change('f2')">2、练习使用iframe 及框架</h2>
-                    <section id="f2" hidden="hidden"> <a href="http://www.juncaixinchi.xyz" target="frame_1">
-                      <p>链接中使用target，frame中使用name，点击改变frame内容至主页</p>
-                    </a> <br>
-                    <br>
-                    <iframe name="frame_1" src="http://www.juncaixinchi.xyz/Study_Note.html" height="500" width="500" frameborder="1"></iframe>
-                    <br>
-<!--以下为框架内容，需在body外使用<frameset cols="50%,50%" border="0">
+    </div>
+    <div>
+      <h2>其他元素（Other Elements）</h2>
+      <pre>
+&lt;!-- This is a comment --&gt;
+&lt;blockquote&gt;
+Text quoted from some source.
+&lt;/blockquote&gt;
+&lt;address&gt;
+Address 1&lt;br&gt;
+Address 2&lt;br&gt;
+City&lt;br&gt;
+&lt;/address&gt;
+                          </pre>
+    </div>
+  </div>
+</section>
+<h2 onclick="Change('f1')">1、各种链接及引用B站外链</h2>
+<section id="f1" hidden="hidden"> <a href="http://www.juncaixinchi.xyz" target="">my home</a> <br>
+  <a href="http://www.juncaixinchi.xyz" target="_blank">my home with "_blank" 打开新页面</a> <br>
+  <a href="http://www.juncaixinchi.xyz" target="_top">my home with "_top" 跳出框架</a> <br>
+  <a href="http://www.juncaixinchi.xyz" target="_self">my home with "_self 留在框架中"</a> <br>
+  <div class="bilibili">
+    <embed height="415" width="544" quality="high" style="margin-top:-29px" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=7234117&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"> </embed>
+  </div>
+</section>
+<h2 onclick="Change('f2')">2、练习使用iframe 及框架</h2>
+<section id="f2" hidden="hidden"> <a href="http://www.juncaixinchi.xyz" target="frame_1">
+  <p>链接中使用target，frame中使用name，点击改变frame内容至主页</p>
+  </a> <br>
+  <br>
+  <iframe name="frame_1" src="http://www.juncaixinchi.xyz/Study_Note.html" height="500" width="500" frameborder="1"></iframe>
+  <br>
+  <!--以下为框架内容，需在body外使用<frameset cols="50%,50%" border="0">
 <frame src="index.html" noresize>
 <frame src="jinwenqi.html" name="showframe">
 </frameset>
 --> 
-<br>
+  <br>
 </section>
 <h2 onclick="Change('f3')">3、图片链接及内链</h2>
 <section id="f3" hidden="hidden"> <img src="img/01.jpg" width="300px" alt="金玟岐" usemap="#jwq"/>
@@ -212,10 +250,10 @@
   <hr style="background-color:red;color:blue;"/>
   <h1 align="center">hello world</h1>
   <pre>
-    这是
-    预格式文本。
-    它保留了      空格
-    和换行。
+这是
+预格式文本。
+它保留了      空格
+和换行。
   </pre>
 </section>
 <h2 onclick="Change('f5')">5、表格&amp;实体字符</h2>
@@ -225,7 +263,7 @@
     <col width="133px"/>
     <col width="133px"/>
     <caption>
-      测试表格
+    测试表格
     </caption>
     <tr>
       <td>1</td>
@@ -239,32 +277,15 @@
     </tr>
     <tr>
       <td><ul>
-        <li>8</li>
-        <li>9</li>
-        <li>9</li>
-      </ul></td>
+          <li>8</li>
+          <li>9</li>
+          <li>9</li>
+        </ul></td>
       <td><img src="img/05.jpg" alt="jinwenqi.jpg" width="50"></td>
       <td><a href="#First">返回开始</a></td>
     </tr>
   </table>
-  <style>
-    table.dataintable {
-      margin-top:10px;
-      border-collapse:collapse;
-      border:3px solid #555555;
-      width:100%;
-      max-width:900px;
-      background-color:#D7D7D7;
-      align:center;
-    }
-    table.dataintable td {
-      vertical-align:baseline;
-      padding:5px 15px 5px 6px;
-      background-color:#d5d5d5;
-      border:1px solid #aaa;
-      text-align:center;
-    }
-  </style>
+
   <table class="dataintable">
     <tr>
       <th style="width:20%">显示结果</th>
@@ -433,101 +454,101 @@
     <p>London is the capital city of England.</p>
     <p>It is the most populous city in the United Kingdom,
       with a metropolitan area of over 13 million inhabitants.</p>
-    </div>
-    <div class="city">
-      <h2>Paris</h2>
-      <p>Paris is the capital and most populous city of France.</p>
-    </div>
-    <div class="city">
-      <h2>Tokyo</h2>
-      <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
-        and the most populous metropolitan area in the world.</p>
-      </div>
-      <br style="clear:both"/>
-    </section>
-    <h2 onclick="Change('f8')">8、表单</h2>
-    <section id="f8" hidden="hidden">
-      <form>
-        <fieldset>
-          <legend>测试表单</legend>
-          <button type="button" onClick="alert('Hello world!')">Hi!</button>
-          <br>
-          <h2>文本输入，少于20个字符用text，多的用textarea:</h2>
-          <br>
-          Text:
-          <input type="text" name="input_text" value="text">
-          <br>
-          <br>
-          Textarea:
-          <textarea>textarea</textarea>
-          <br>
-          <br>
-          Password:
-          <input type="password" name="input_pwd" value="password">
-          <br>
-          <h2>下拉列表</h2>
-          <select name="activity">
-            <option value="Coding">编程</option>
-            <option value="Reading">阅读</option>
-            <option value="Game" selected>游戏</option>
-          </select>
-          <br>
-          <h2>HTML5 &lt;datalist&gt; 元素</h2>
-          <input list="browsers" name="browser">
-          <datalist id="browsers">
-            <option value="Internet Explorer"></option>
-            <option value="Firefox"></option>
-            <option value="Chrome"></option>
-            <option value="Opera"></option>
-            <option value="Safari"></option>
-          </datalist>
-          <br>
-          <h2>单选按钮，name定得一样则只能选这其中之一，预选使用checked）</h2>
-          <input type="radio" value="Tian" name="input_radio" checked>
-          甜党<br>
-          <input type="radio" value="Xian" name="input_radio">
-          咸党<br>
-          <br>
-          <p>你想要抽中啥？</p>
-          <input type="checkbox" value="Saber" name="Saber">
-          吾王<br>
-          <input type="checkbox" value="Archer" name="Archer">
-          红A<br>
-          <input type="checkbox" value="Lancher" name="Lancher">
-          师匠<br>
-          <input type="checkbox" value="Caster" name="Caster">
-          孔明<br>
-          <input type="checkbox" value="Berserker" name="Berserker">
-          黑狗<br>
-          <br>
-          <h2>Html5 新内容：日期、颜色</h2>
-          选择日期：
-          <input type="date" name="birthday">
-          <br>
-          选择颜色：
-          <input type="color" name="favcolor" value="#ff0000">
-          <br>
-          选择数值范围：
-          <input type="range" name="points" min="0" max="100">
-          <br>
-          <br>
-          <br>
-          <input type="submit" value="提交">
-        </fieldset>
-      </form>
-    </section>
-    <h2 onclick="Change('f9')">9、HTML5</h2>
-    <section id="f9" hidden="hidden">
-      <h2>使用html5shiv使旧版浏览器兼容HTML5</h2>
-      <code>
-        <pre>
-          &lt;!--[if lt IE 9]&gt;
-          &lt;script src=&quot;http://cdn.bootcss.com/html5shiv/r29/html5.js&quot;&gt;&lt;/script&gt;
-          &lt;![endif]--&gt;
+  </div>
+  <div class="city">
+    <h2>Paris</h2>
+    <p>Paris is the capital and most populous city of France.</p>
+  </div>
+  <div class="city">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+      and the most populous metropolitan area in the world.</p>
+  </div>
+  <br style="clear:both"/>
+</section>
+<h2 onclick="Change('f8')">8、表单</h2>
+<section id="f8" hidden="hidden">
+  <form>
+    <fieldset>
+      <legend>测试表单</legend>
+      <button type="button" onClick="alert('Hello world!')">Hi!</button>
+      <br>
+      <h2>文本输入，少于20个字符用text，多的用textarea:</h2>
+      <br>
+      Text:
+      <input type="text" name="input_text" value="text">
+      <br>
+      <br>
+      Textarea:
+      <textarea>textarea</textarea>
+      <br>
+      <br>
+      Password:
+      <input type="password" name="input_pwd" value="password">
+      <br>
+      <h2>下拉列表</h2>
+      <select name="activity">
+        <option value="Coding">编程</option>
+        <option value="Reading">阅读</option>
+        <option value="Game" selected>游戏</option>
+      </select>
+      <br>
+      <h2>HTML5 &lt;datalist&gt; 元素</h2>
+      <input list="browsers" name="browser">
+      <datalist id="browsers">
+        <option value="Internet Explorer"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist>
+      <br>
+      <h2>单选按钮，name定得一样则只能选这其中之一，预选使用checked）</h2>
+      <input type="radio" value="Tian" name="input_radio" checked>
+      甜党<br>
+      <input type="radio" value="Xian" name="input_radio">
+      咸党<br>
+      <br>
+      <p>你想要抽中啥？</p>
+      <input type="checkbox" value="Saber" name="Saber">
+      吾王<br>
+      <input type="checkbox" value="Archer" name="Archer">
+      红A<br>
+      <input type="checkbox" value="Lancher" name="Lancher">
+      师匠<br>
+      <input type="checkbox" value="Caster" name="Caster">
+      孔明<br>
+      <input type="checkbox" value="Berserker" name="Berserker">
+      黑狗<br>
+      <br>
+      <h2>Html5 新内容：日期、颜色</h2>
+      选择日期：
+      <input type="date" name="birthday">
+      <br>
+      选择颜色：
+      <input type="color" name="favcolor" value="#ff0000">
+      <br>
+      选择数值范围：
+      <input type="range" name="points" min="0" max="100">
+      <br>
+      <br>
+      <br>
+      <input type="submit" value="提交">
+    </fieldset>
+  </form>
+</section>
+<h2 onclick="Change('f9')">9、HTML5</h2>
+<section id="f9" hidden="hidden">
+  <h2>使用html5shiv使旧版浏览器兼容HTML5</h2>
+  <code>
+  <pre>
+&lt;!--[if lt IE 9]&gt;
+&lt;script src=&quot;http://cdn.bootcss.com/html5shiv/r29/html5.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
         </pre>
-      </code>
-      <h2>canvas 元素用于在网页上绘制图形，其本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：</h2>
-      <script>
+  </code>
+  <h2>canvas 元素用于在网页上绘制图形，其本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：</h2>
+  <script>
         function cnvs_getCoordinates(e)
         {
           x=e.clientX;
@@ -542,19 +563,15 @@
         var cxt=c.getContext("2d");
         cxt.fillStyle="#FF0000";
         cxt.fillRect(50,0,20,40);
-
-
-      
       </script>
-      <canvas id="mycanvas" height="500px" width="809px" style="border:1px dashed grey" onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"> </canvas>
-      <p id="coord"></p>
- 
-    </section>
-    <div style="clear:both"> <br>
-      <hr/>
-      <!--指向锚的链接--> 
-      <a href="#First">
-        <p>返回开始</p>
-      </a> </div>
-    </body>
-    </html>
+  <canvas id="mycanvas" height="500px" width="809px" style="border:1px dashed grey" onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"> </canvas>
+  <p id="coord"></p>
+</section>
+<div style="clear:both"> <br>
+  <hr/>
+  <!--指向锚的链接--> 
+  <a href="#First">
+  <p>返回开始</p>
+  </a> </div>
+</body>
+</html>

@@ -3,6 +3,9 @@
 <head>
 	<title>学习笔记-JavaScript</title>
 	<link rel="shortcut icon" href="img/L.ico">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script> 
 		function Change(value)
 		{
@@ -16,6 +19,38 @@
 			}
 		}
 	</script>
+	<style>
+		pre {
+			width: 800px;
+			margin: 10px 0 0 0;
+			padding: 10px;
+			border: 0;
+			border: 1px dotted #785;
+			background: #f5f5f5;
+		}
+		table.dataintable {
+			margin-top:10px;
+			border-collapse:collapse;
+			border:3px solid #555555;
+			width:100%;
+			max-width:900px;
+			background-color:#D7D7D7;
+			align:center;
+		}
+		table.dataintable td {
+			vertical-align:baseline;
+			padding:5px 15px 5px 6px;
+			background-color:#d5d5d5;
+			border:1px solid #aaa;
+			text-align:center;
+		}
+		table.time_during {
+			width:100%;
+		}
+		table.time_during td {
+			text-align:right;
+		}
+	</style>
 </head>
 <body>
 	<a name="First">
@@ -25,12 +60,403 @@
 		</noscript>
 	</a>
 	<hr/>
-	<h2 onclick="Change('f0')">1、JS的基本命令</h2>
-	<section id="f0" hidden="hidden">
+	<h2 onclick="Change('f1')">1、Javascript基础</h2>
+	<section id="f1" hidden="hidden">
+		<p onclick="Change('Operators')">给定 x=10 和 y=5，下面的表格解释了赋值运算符：（点击显示）</p>
+		<table id="Operators" class="dataintable" hidden="hidden">
+			<tr>
+				<th>运算符</th>
+				<th>描述</th>
+				<th>例子</th>
+				<th>结果</th>
+			</tr>
+			<tr>
+				<td>+</td>
+				<td>加</td>
+				<td>x=y+2
+				</td>
+				<td>x=7
+				</td>
+			</tr>
+			<tr>
+				<td>-</td>
+				<td>减</td>
+				<td>x=y-2</td>
+				<td>x=3</td>
+			</tr>
+			<tr>
+				<td>*</td>
+				<td>乘</td>
+				<td>x=y*2</td>
+				<td>x=10</td>
+			</tr>
+			<tr>
+				<td>/</td>
+				<td>除</td>
+				<td>x=y/2</td>
+				<td>x=2.5</td>
+			</tr>
+			<tr>
+				<td>%</td>
+				<td>求余数 (保留整数)</td>
+				<td>x=y%2</td>
+				<td>x=1</td>
+			</tr>
+			<tr>
+				<td>++</td>
+				<td>累加</td>
+				<td>x=++y</td>
+				<td>x=6
+				</td>
+			</tr>
+			<tr>
+				<td>--</td>
+				<td>递减</td>
+				<td>x=--y</td>
+				<td>x=4
+				</td>
+			</tr>
+			<tr>
+				<td>=</td>
+				<td>x=y</td>
+				<td>&nbsp;</td>
+				<td>x=5</td>
+			</tr>
+			<tr>
+				<td>+=</td>
+				<td>x+=y</td>
+				<td>x=x+y</td>
+				<td>x=15</td>
+			</tr>
+			<tr>
+				<td>-=</td>
+				<td>x-=y</td>
+				<td>x=x-y</td>
+				<td>x=5</td>
+			</tr>
+			<tr>
+				<td>*=</td>
+				<td>x*=y</td>
+				<td>x=x*y</td>
+				<td>x=50</td>
+			</tr>
+			<tr>
+				<td>/=</td>
+				<td>x/=y</td>
+				<td>x=x/y</td>
+				<td>x=2</td>
+			</tr>
+			<tr>
+				<td>%=</td>
+				<td>x%=y</td>
+				<td>x=x%y</td>
+				<td>x=0</td>
+			</tr>
+		</table>
+		<h4>循环中使用Break跳出循环，使用Continue进入下一个循环</h4>
+		<h4>js中自带了Math相关函数</h4>
+		<p onclick="Change('Math_Property')">Math 对象属性（点击显示）</p>
+		<table id="Math_Property" class="dataintable" hidden="hidden">
+			<tr><th style="width:25%">属性</th><th>描述</th></tr>
+			<tr><td>E</td><td>返回算术常量 e，即自然对数的底数（约等于2.718）。</td></tr>
+			<tr><td>LN2</td><td>返回 2 的自然对数（约等于0.693）。</td></tr>
+			<tr><td>LN10</td><td>返回 10 的自然对数（约等于2.302）。</td></tr>
+			<tr><td>LOG2E</td><td>返回以 2 为底的 e 的对数（约等于 1.414）。</td></tr>
+			<tr><td>LOG10E</td><td>返回以 10 为底的 e 的对数（约等于0.434）。</td></tr>
+			<tr><td>PI</td><td>返回圆周率（约等于3.14159）。</td></tr>
+			<tr><td>SQRT1_2</td><td>返回返回 2 的平方根的倒数（约等于 0.707）。</td></tr>
+			<tr><td>SQRT2</td><td>返回 2 的平方根（约等于 1.414）。</td></tr>
+		</table>
+		<p onclick="Change('Math_Method')">Math 对象方法（点击显示）</p>
+		<table id="Math_Method"class="dataintable" hidden="hidden">
+			<tr><th style="width:25%">方法</th><th>描述</th></tr>
+			<tr><td>abs(x)</td><td>返回数的绝对值。</td></tr>
+			<tr><td>acos(x)</td><td>返回数的反余弦值。</td></tr>
+			<tr><td>asin(x)</td><td>返回数的反正弦值。</td></tr>
+			<tr><td>atan(x)</td><td>以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值。</td></tr>
+			<tr><td>atan2(y,x)</td><td>返回从 x 轴到点 (x,y) 的角度（介于 -PI/2 与 PI/2 弧度之间）。</td></tr>
+			<tr><td>ceil(x)</td><td>对数进行上舍入。</td></tr>
+			<tr><td>cos(x)</td><td>返回数的余弦。</td></tr>
+			<tr><td>exp(x)</td><td>返回 e 的指数。</td></tr>
+			<tr><td>floor(x)</td><td>对数进行下舍入。</td></tr>
+			<tr><td>log(x)</td><td>返回数的自然对数（底为e）。</td></tr>
+			<tr><td>max(x,y)</td><td>返回 x 和 y 中的最高值。</td></tr>
+			<tr><td>min(x,y)</td><td>返回 x 和 y 中的最低值。</td></tr>
+			<tr><td>pow(x,y)</td><td>返回 x 的 y 次幂。</td></tr>
+			<tr><td>random()</td><td>返回 0 ~ 1 之间的随机数。</td></tr>
+			<tr><td>round(x)</td><td>把数四舍五入为最接近的整数。</td></tr>
+			<tr><td>sin(x)</td><td>返回数的正弦。</td></tr>
+			<tr><td>sqrt(x)</td><td>返回数的平方根。</td></tr>
+			<tr><td>tan(x)</td><td>返回角的正切。</td></tr>
+			<tr><td>toSource()</td><td>返回该对象的源代码。</td></tr>
+			<tr><td>valueOf()</td><td>返回 Math 对象的原始值。</td></tr>
+		</table>
+		<h4>错误捕捉:利用try{}catch(err){}</h4>
+		<input type="button" value="查看消息" onclick="message()" />
+		<script>
+			var txt="";
+			function message()
+			{
+				try
+				{
+					Test_Function("Welcome guest!");
+				}
+				catch(err)
+				{
+					txt="本页有一个错误。\n\n";
+					txt+="错误描述：" + err.message + "\n\n";
+					txt+="点击确定继续。\n\n";
+					alert(txt);
+				}
+			}
+		</script>
+		<h4>JavaScript HTML DOM 事件</h4>
+		注：不能使用与DOM事件相同的函数名！
+		<p onclick="onclick1(this)">疯狂点击我吧 onclick()</p>
+		<input type="text" onfocus="onfocus1(this)" onblur="onblur1(this)" placeholder="焦点我onfocus()"></p>
+		<p onmouseover="onmouseover1(this)" onmouseout="onmouseout1(this)">鼠标在哪里？onmouseover()和onmouseout()</p>
+		<p onmousedown="onmousedown1(this)" onmouseup="onmouseup1(this)" >按住我变颜色onmousedown()onmouseup()</p>
+		<p id="Des" style="word-break: break-all" onclick="show_all_propert(this)">点我显示&lt;p&gt;可能的属性</p>
+		<script>
+			function show_all_propert(obj)
+			{
+				var text="";
+				for(x in obj)
+				{
+					text = text + x +"&nbsp;";
+				}
+				document.getElementById("Des").innerHTML="&lt;p&gt;的属性有：<br>" + text;
+			}
+			var click_num=0;
+			var check_num=1;
+			function onclick1(obj)//每2的次幂显示点击次数！just for fun \(^o^)/~
+			{	
+				var YOUs="";
+				for(i=0;i<click_num;i++)
+				{
+					YOUs=YOUs+"又";
+				}
+				obj.innerHTML="你" + YOUs + "点了我！";
+				click_num++;
+				if(!(click_num%Math.pow(2,check_num)))
+				{
+					alert("夭寿啊，你点了我" + click_num + "下！");
+					check_num++;
+				}
+			}
+			function onfocus1(obj)
+			{
+				obj.style.background="red";
+			}	
+			function onblur1(obj)
+			{
+				obj.style.background="white";
+			}		
+			function onmouseover1(obj)
+			{
+				obj.innerHTML="鼠标过来了";
+			}			
+			function onmouseout1(obj)
+			{
+				obj.innerHTML="鼠标离开了";
+			}
+			function onmousedown1(obj)
+			{
+				obj.style.color="blue";
+			}
+			function onmouseup1(obj)
+			{
+				obj.style.color="black";				
+			}
+		</script>
+	</section>
+	<h2 onclick="Change('f2')">2、JS windows</h2>
+	<section id="f2" hidden="hidden">
+		<button onclick="Get_WinSize()">点击显示浏览器的内部窗口大小-激发警示框</button>
+		<br>
+		<br>
+		<button onclick="window.history.forward()">点击前进</button>
+		<button onclick="window.history.back()">点击返回</button>
+		<br>
+		<br>
+		<p id="time_p">你已经盯着这个页面看了</p>
+		<script type="text/javascript">
+			function Get_WinSize()//涵盖所有浏览器
+			{
+				var w=window.innerWidth
+				|| document.documentElement.clientWidth
+				|| document.body.clientWidth;
+				var h=window.innerHeight
+				|| document.documentElement.clientHeight
+				|| document.body.clientHeight;
+				alert("高为：" + h + "\n" + "宽为：" + w);//带换行的警示框
+				//document.write(location.href);
+				window.close();
+			}
+			var i=0;//定义全局变量
+			function Time_count()
+			{	
+				
+				document.getElementById("time_p").innerHTML= "你已经盯着这个页面看了"+ i + "秒了~~~~(>_<)~~~~";
+				i+=1;
+				//90秒后改变文字！这里面必须使用单双引号配合使用
+				if(i>90)
+				{
+					document.getElementById("time_p").innerHTML="看够了吧，白白！！！";
+				}
+				if(i>100)
+				{
+					window.close();//10秒后关闭窗口~~~~(>_<)~~~~
+				}
+				setTimeout("Time_count()",1000);//利用调用函数自身以实现无限循环！
+			}
+			Time_count();//自动开始计数
+		</script>
+	</section>
+	<h2 onclick="Change('f3')">3、jQuery</h2>
+	<section id="f3">
+		<p>$("p") 选取 &lt;p&gt; 元素。</p>
+		<p>$("p.intro") 选取所有 class="intro" 的 &lt;p&gt; 元素。</p>
+		<p>$("p#demo") 选取所有 id="demo" 的 &lt;p&gt; 元素。</p>
+		<p>$("[href]") 选取所有带有 href 属性的元素。</p>
+		<p>$("[href!='#']") 选取所有带有 href 值不等于 "#" 的元素。</p>
+		<p>$("[href$='.jpg']") 选取所有 href 值以 ".jpg" 结尾的元素。</p>
+		<p>$(this) 选取当前 HTML 元素</p>
+		<p>$("div#intro .head")	id="intro" 的 &lt;div&gt; 元素中的所有 class="head" 的元素</p>
+		<button id="button01">点击立刻显示或隐藏图片</button>
+		<button id="button02">点击3s淡入或淡出图片</button>
+		<button id="button03">点击1s淡化图片</button>
+		<button id="button04">点击1s黑化图片（O__O "…）</button>
+		<button id="button05">点击1s滑出或滑走图片</button>
+		<button id="button06">点击移动图片</button>
+		<button id="button07">点击把图片变来变去</button>
+		<button id="button08">复原图片</button>
+		<br>
+		<img id="img06" src="img/06.jpg" style="position:relative;display:none;" >
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#button01").click(function(){
+					$("#img06").toggle();//轮流显示或隐藏
+				});
+				$("#button02").click(function(){
+					$("#img06").fadeToggle(3000);//轮流淡入或淡出
+				});
+				$("#button03").click(function(){
+					$("#img06").fadeTo(1000,0.2);//淡化
+				});
+				$("#button04").click(function(){
+					$("#img06").fadeTo(1000,1);//黑化（O__O "…）
+				});
+				$("#button05").click(function(){
+					$("#img06").slideToggle(1000);//滑来滑去
+				});
+				//animate内部用逗号！
+				$("#button06").click(function(){
+					$("#img06").animate({
+						left:'+=120px',
+						heigth:'+=100px',
+						width:'+=100px',
+					},1000);//1000为设定动画时间
+				});
+				$("#button07").click(function(){
+					var img=$("#img06");
+					img.animate({left:'+=100px'},1000);
+					img.animate({width:'-=320px'},1000);
+					img.animate({margin:'100px'},1000);
+				});
+				//复原
+				$("#button08").click(function(){
+					$("#img06").animate({
+						left:'0px',
+						heigth:'640px',
+						width:'640px',
+					});
+				});
+			});
+
+			// 点击<p>元素改变颜色
+			var check_color=1;
+			$(document).ready(function(){
+				$("p").click(function(){
+					if(check_color==1){
+						$(this).css("color","red");
+						check_color=0;
+					}
+					else{
+						$(this).css("color","black");
+						check_color=1;
+					}
+				});
+			});
+		</script>
+	</section>
+	<h2 onclick="Change('f9')">9、demos</h2>
+	<section id="f9" hidden="hidden">
+		<b>利用计时器功能计算你出生到现在多少时间了</b>
+		<input type="date" id="birthday" value="1993-01-01">
+		<input type="button" value="提交" onclick="Calcu_Time()">
+		<div id="show_dur" hidden="hidden" style="max-width: 250px; border:1px solid #aaa;">
+			<p>从你出生到现在已经过了：</p>
+			<table id="time_during" class="time_during">
+				<tr><td><p id= "year"></p></td><td>年</td></tr>
+				<tr><td><p id= "month"></p></td><td>月</td></tr>
+				<tr><td><p id= "day"></p></td><td>日</td></tr>
+				<tr><td><p id= "hour"></p></td><td>小时</td></tr>
+				<tr><td><p id= "min"></p></td><td>分</td></tr>
+				<tr><td><p id= "second"></p></td><td>秒</td></tr>
+			</table>
+		</div>
+		<script type="text/javascript">
+			function Calcu_Time()
+			{
+				var time_check;
+				var br="<br>";
+				//变换为文本，强行获得出生的年月日
+				var Birth=document.getElementById("birthday").value;//要注意Birth非date类型的对象
+				var x=Birth.toString();
+				x=x.split("-");
+				var yy=x[0];
+				var mm=x[1];
+				var dd=x[2];
+				//获得目前的时间
+				var Now=new Date();
+				//转化为19700101至该日期的毫秒数
+				var ss_now = Date.parse(Now);
+				var ss_birth = Date.parse(Birth);
+				var dur_second=(ss_now-ss_birth)/1000;
+				if(dur_second<0)
+				{
+					alert("请输入正确的日期！");
+					location.reload();
+				}
+				var dur_min=dur_second/60;
+				var dur_hour=dur_min/60;
+				var dur_day=dur_hour/24;
+				var dur_year=dur_day/365;
+				var dur_month=dur_year*12;
+				//利用toFixed()使结果中数字的位数稳定
+				dur_min=dur_min.toFixed(2);
+				dur_hour=dur_hour.toFixed(4);
+				dur_day=dur_day.toFixed(6);
+				dur_month=dur_month.toFixed(7);
+				dur_year=dur_year.toFixed(8);
+				document.getElementById("show_dur").hidden=null;
+				document.getElementById("year").innerHTML=dur_year;
+				document.getElementById("month").innerHTML=dur_month;
+				document.getElementById("day").innerHTML=dur_day;
+				document.getElementById("hour").innerHTML=dur_hour;
+				document.getElementById("min").innerHTML=dur_min;
+				document.getElementById("second").innerHTML=dur_second;
+				time_check=setTimeout("Calcu_Time('birthday')",1000);//每一秒更新！
+			}
+		</script>
+		<br>
+		<br>
+		<br>
 		<b>利用js和表单，建立一个简单的打分系统</b>
 		<p id="text1">我是要变化的文本！</p>
 		<script>
-			function test()
+			function rest()
 			{
 				a=document.getElementById("f0");
 				document.getElementById("text1").innerHTML="我是要变化的文本！";
@@ -52,12 +478,6 @@
 				var a='★★★★★☆☆☆☆☆'.substring(5 - rating, 10 - rating );
 				document.getElementById("text1").innerHTML=a;
 			}
-			function Get_Pic(id)
-			{
-				var x=document.getElementById(id).value;
-				url="http://file.fgowiki.591mogu.com/fgo/card/servant/" + x + ".jpg";
-				document.getElementById("pic").src=url;
-			}
 		</script>
 		<br>
 		<!--要注意这里要用id，然后get id，name 与id 是不同的！-->
@@ -74,20 +494,58 @@
 		<button type="button" onclick="getRating('points')">点击打分</button>
 		<br>
 		<br>
-
-		<button type="button" onclick="test()">点击这里，隐藏内容</button>
+		<button type="button" onclick="rest()">点击这里重来</button>
 		<br>
 		<br>
 		<hr>
 		<b>自动抓取fgowiki的图鉴！</b>
 		<br>
 		<br>
-		<img id="pic" src="http://file.fgowiki.591mogu.com/fgo/card/servant/001D.jpg" alt="英灵图鉴" float="left">
-		<br>
+		<script type="text/javascript">
+			function Get_Pic(id)
+			{
+				var x=document.getElementById(id).value;
+				if(!x)
+				{
+					alert("请输入ID！");return;
+				}
+				url="http://file.fgowiki.591mogu.com/fgo/card/servant/" + x + ".jpg";
+				document.getElementById("pic").src=url;
+			}
+			function Random_Pic(id)
+			{
+				var x=1;
+				x=Math.round(Math.random()*149+1);
+				if(x<10)
+				{
+					random_id= "00" + x + "D";
+				}
+				else if(x<100)
+				{
+					random_id= "0" + x + "D";
+				}
+				else
+				{
+					random_id= x + "D";
+				}
+				url="http://file.fgowiki.591mogu.com/fgo/card/servant/" + random_id + ".jpg";
+				document.getElementById("pic").src=url;
+				document.getElementById("input_pic").value=random_id;
+				// downloadFile(url);
+			}
+			// function downloadFile(url){  
+			// 	var elemIF = document.createElement("iframe");  
+			// 	elemIF.src = url;  
+			// 	elemIF.style.display = "none";
+			// 	document.body.appendChild(elemIF);
+			// }
+		</script>
 		<input type="text" id="input_pic" placeholder="输入ID，如023D">
-		<br>
-		<br>
 		<button type="button" onclick="Get_Pic('input_pic')">Get Pic</button>
+		<button type="button" onclick="Random_Pic('input_pic')">随机图片</button>
+		<br>
+		<br>
+		<img id="pic" src="http://file.fgowiki.591mogu.com/fgo/card/servant/001D.jpg" alt="英灵图鉴" float="left">
 		<br>
 	</section>
 </body>
